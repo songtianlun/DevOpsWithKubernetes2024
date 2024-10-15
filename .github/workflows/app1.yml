@@ -32,7 +32,7 @@ jobs:
           echo "tags=${TAGS}" >> $GITHUB_OUTPUT
           echo "docker_image=${DOCKER_IMAGE}" >> $GITHUB_OUTPUT
         fi
-        echo ::set-output name=platforms::${PLATFORMS}
+        echo "platforms=${PLATFORMS}" >> $GITHUB_OUTPUT
 
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v1
