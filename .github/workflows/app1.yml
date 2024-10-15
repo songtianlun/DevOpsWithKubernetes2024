@@ -3,7 +3,7 @@ name: Release app1
 on:
   push:
     branches: 
-      - master
+      - main
     paths:
       - 'app1/**'
       - '.github/workflows/app1.yml'
