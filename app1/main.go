@@ -20,9 +20,16 @@ func pseudo_uuid() (uuid string) {
     return
 }
 
-func main() {
+func print_time_random_uuid() {
     dt := time.Now() 
     uuid := pseudo_uuid()
+    fmt.Printf("%v - %v\n",dt.Format(time.RFC3339), uuid)
+}
 
-    fmt.Printf("%v - %v\n",dt.String(), uuid)
+func main() {
+    for {
+        print_time_random_uuid()
+        time.Sleep(5 * time.Second)
+    }
+
 }
