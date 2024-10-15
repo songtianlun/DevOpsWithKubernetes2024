@@ -21,7 +21,7 @@ jobs:
         DOCKER_IMAGE=songtianlun/dwk-app1
         # Set the platforms to build for here and thus reduce duplicating it.
         PLATFORMS=amd64,arm,arm64
-        TAGS="${DOCKER_IMAGE}:${{ github.sha }}"
+        TAGS="${DOCKER_IMAGE}:${{ github.sha }},${DOCKER_IMAGE}:latest"
 
         # Set output parameters.
 
